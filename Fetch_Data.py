@@ -1,7 +1,11 @@
-""" Kindly note, I could only find 1 minute data from the XAUUSD asset in the period stated, and thus I had to resample it to 4 Hrs.
-    I made sure to avoid lookahead bias in the resampling by ensurng the 4 Hr candle only contained data from the lower timeframes that happened within those 4 hrs.
-    The Data files were large and it was not possible to commit them to this repo.
-    Here is the data Source; https://www.histdata.com/download-free-forex-historical-data/.
+""" 
+Kindly note, I could only find 1 minute data from the XAUUSD asset in the period stated, and thus I had to resample it to 4 Hrs.
+I made sure to avoid lookahead bias in the resampling by ensurng the 4 Hr candle only contained data from the lower timeframes that happened within those 4 hrs.
+The Data files are large and it was not possible to commit them to this repo.
+Here is the data Source; https://www.histdata.com/download-free-forex-historical-data/.
+
+However, for more efficient Data Loading, you can use the MetaTrader5 library and get the 4 HR data directly without resampling headaches,
+just ensure you have the app installed and connected to an account.
 """
 
 import pandas as pd
