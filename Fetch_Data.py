@@ -1,3 +1,9 @@
+""" Kindly note, I could only find 1 minute data from the XAUUSD asset in the period stated, and thus I had to resample it to 4 Hrs.
+    I made sure to avoid lookahead bias in the resampling by ensurng the 4 Hr candle only contained data from the lower timeframes that happened within those 4 hrs.
+    The Data files were large and it was not possible to commit them to this repo.
+    Here is the data Source; https://www.histdata.com/download-free-forex-historical-data/.
+"""
+
 import pandas as pd
 import os
 import sys
@@ -132,7 +138,7 @@ def create_multitimeframe_data(file_paths: list[str]) -> pd.DataFrame:
 
 
 if __name__ == '__main__':
-    # Define the paths to your data files as specified by the user.
+    # Define the paths in the project file.
     # Assuming they are CSV files, potentially tab-separated from MT5.
     data_files = ['DAT_MT_XAUUSD_M1_2023.csv', 'DAT_MT_XAUUSD_M1_2024.csv', 'DAT_MT_XAUUSD_M1_2025.csv']
 
